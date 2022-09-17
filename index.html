@@ -1,0 +1,90 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: #030328;
+            }
+
+
+
+            .scroll-tray {
+                white-space: nowrap;
+            }
+
+            .scroll-tray div {
+                display: inline-block;
+            }
+
+            .scroll-tray img {
+                border-radius: 0.3rem;
+                margin: 7px 5px;
+                padding: 0;
+                width: 340px;
+                height: 200px;
+                background-color: white;
+            }
+
+            .scroll-holder {
+                overflow-x: hidden;
+            }
+
+            .scroll-holder .scroll-tray:first-child {
+                animation: scroll-tray-hero 2s linear infinite;
+            }
+
+            .scroll-holder .scroll-tray:last-child {
+                animation: scroll-tray-hero 10s linear infinite;
+            }
+
+            @keyframes scroll-tray-hero {
+                0% {
+                    transform: translateX(0);
+                }
+
+                99.99% {
+                    transform: translateX(-709px);
+                }
+
+                100% {
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <h1>How to create moving movie slider?</h1>
+            <h2>(HTML & CSS)</h2>
+        </section>
+        <section>
+            <div class="scroll-holder">
+
+                <div class="scroll-tray">
+
+
+                    <div>
+                        <img src="img1.png" />
+                    </div>
+                    <div>
+                        <img src="img2.png" />
+                    </div>
+                    <div>
+                        <img src="img3.png" />
+                    </div>
+                    <div>
+                        <img src="img4.jpg" />
+                    </div>
+                    <div>
+                        <img src="img5.jpg" />
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+    </body>
+</html>
